@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { categoryTotals, fetchAllExpenses } from '../services/firebaseService.js';
+import { categoryTotals, fetchAllExpenses } from '../services/storageService.js';
 import { isAfter, isBefore, parseISO, startOfDay, subDays } from 'date-fns';
 
 function Insights() {

@@ -2,7 +2,7 @@
 
 ### Tech Stack
 - React (Vite) — frontend
-- Firebase Firestore — backend and database
+- localStorage — local browser persistence
 - react-router-dom — navigation
 - date-fns — date formatting
 
@@ -12,19 +12,16 @@
 - Insights (/insights) — monthly total, category breakdown, smart weekly insight
 
 ### Backend Choice
-Firebase Firestore — no server needed, free tier, integrates directly with React
+No backend server for now; expenses are stored in localStorage
 
 ### Smart Insight Logic
 Compares each category's spending in the last 7 days vs the previous 7 days.
 Flags any category that went up more than 20%.
 
 ### How to Run
-1. Create a Firebase project at console.firebase.google.com
-2. Enable Firestore in the Firebase console
-3. Copy your Firebase config into src/firebase.js
-4. Run: npm install
-5. Run: npm run dev
+1. Run: npm install
+2. Run: npm run dev
 
 ### Trade-offs
-- No login — all users share the same Firestore collection
+- No login — data is device/browser-specific
 - Aggregation is done client-side, fine for small data sets

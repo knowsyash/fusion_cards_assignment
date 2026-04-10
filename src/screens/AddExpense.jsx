@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addExpense } from '../services/firebaseService.js';
+import { addExpense } from '../services/storageService.js';
 
 function AddExpense() {
     const today = new Date().toISOString().split('T')[0];
@@ -33,7 +33,7 @@ function AddExpense() {
             setDate(today);
         } catch {
             setMessage('');
-            setError('Could not save expense. Check your Firebase config and try again.');
+            setError('Could not save expense. Please try again.');
         }
     }
 

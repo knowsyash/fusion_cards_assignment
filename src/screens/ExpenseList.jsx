@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { format, isSameDay, parseISO } from 'date-fns';
-import { fetchAllExpenses } from '../services/firebaseService.js';
+import { fetchAllExpenses } from '../services/storageService.js';
 
 function ExpenseList() {
     const navigate = useNavigate();
